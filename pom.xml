@@ -34,6 +34,12 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+   			 <groupId>org.jenkins-ci.ruby-plugins</groupId>
+    			 <artifactId>mysql-job-databases</artifactId>
+   		         <version>0.1.0</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
