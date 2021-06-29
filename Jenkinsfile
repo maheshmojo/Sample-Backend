@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew build'
+                echo'building the application'
             }
         }
         stage('Test') {
             steps {
-                sh './gradlew test'
+                echo'testing the application'
             }
         }
     }
