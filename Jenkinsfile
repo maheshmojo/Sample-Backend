@@ -1,11 +1,8 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven 3.8.1'
-        jdk 'Java-11'
-    }
-    triggers {
-        pollSCM '* * * * *'
+    tools { 
+        maven 'MAVEN_HOME' 
+        jdk 'Java-11' 
     }
     stages {
         stage ('Initialize') {
@@ -13,20 +10,14 @@ pipeline {
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "MAVEN_HOME = ${MAVEN_HOME}"
-                '''
+                ''' 
             }
         }
-    stages {
-        stage('Build') {
+
+        stage ('Build') {
             steps {
-                echo'building the application'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo'testing the application'
+                echo 'This is a minimal pipeline.'
             }
         }
     }
-}
 }
